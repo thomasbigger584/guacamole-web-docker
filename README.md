@@ -7,6 +7,29 @@ Inspired by projects:
 - [guacamole/guacamole-client/doc/guacamole-example](https://github.com/apache/guacamole-client/tree/master/doc/guacamole-example)
 
 
+### Connecting Guacamole to RealVNC on Raspberry PI
+
+**Enable RealVNC on the PI**
+
+Go to Menu > Preferences > Raspberry Pi Configuration > Interfaces.
+
+You will come across VNC in there. Make sure it’s Enabled. Once you’ve done that, the software will start every time you boot.
+
+**Real VNC**
+- Change Security Authentication to VNC password
+- Users and Permissions set a password to Standard user (user)
+
+**Guacamole**
+- Connection details
+  - Network
+    - Host Name: < device ip >
+    - Post: 5900
+  - Authentication:
+    - Username: <blank>
+    - Password: password set in Real VNC
+
+Set these parameters (hardcoded for now) into `com.twb.guacamole.net.MyGuacamoleTunnelServlet`
+
 ### Development
 
 Clone this repository and compile the sources.
