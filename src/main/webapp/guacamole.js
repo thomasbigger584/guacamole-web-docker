@@ -10,8 +10,9 @@ display.appendChild(guac.getDisplay().getElement());
 
 // Error handler
 guac.onerror = function (error) {
-    console.log('error:', error);
-    alert(error);
+    const jsonError = JSON.stringify(error);
+    console.log('error: ' + jsonError);
+    alert(jsonError);
 };
 
 // Connect
