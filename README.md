@@ -1,10 +1,11 @@
 # Guacamole Simple sample server with docker
 
-Simple tunnel example with hard coded parameters
+Simple tunnel example with hard coded parameters.
 
-Based on example for expose guacamole through guacamole-client.
+Inspired by projects:
+- [juazugas/guacamole-example](https://github.com/juazugas/guacamole-example)
+- [guacamole/guacamole-client/doc/guacamole-example](https://github.com/apache/guacamole-client/tree/master/doc/guacamole-example)
 
-Look original project [guacamole/guacamole-client/doc/guacamole-example](https://github.com/apache/guacamole-client/tree/master/doc/guacamole-example)
 
 ### Development
 
@@ -20,6 +21,14 @@ To launch the example you can run the application with
 ```
 docker-compose up
 ```
+
+Navigate to
+
+```
+http://localhost:8080/
+```
+
+<img alt="img.png" height="591" src="vnc-screenshot.png" width="968"/>
 
 ### Logging
 

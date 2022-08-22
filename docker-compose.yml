@@ -9,7 +9,7 @@ services:
     build: .
     container_name: guacweb
     ports:
-      - "8081:8080"
+      - "8080:8080"
     restart: on-failure
     depends_on:
       - guacd
