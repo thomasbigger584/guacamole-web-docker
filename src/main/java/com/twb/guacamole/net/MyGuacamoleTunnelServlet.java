@@ -11,9 +11,6 @@ import org.apache.guacamole.servlet.GuacamoleHTTPTunnelServlet;
 
 import javax.servlet.http.HttpServletRequest;
 
-/**
- * Simple tunnel example with hard-coded configuration parameters.
- */
 public class MyGuacamoleTunnelServlet extends GuacamoleHTTPTunnelServlet {
     private static final String HEADER_CONNECTION_PROTOCOL = "X-Connection-Protocol";
     private static final String HEADER_CONNECTION_HOSTNAME = "X-Connection-Hostname";
