@@ -25,7 +25,7 @@ const tunnel = new Guacamole.HTTPTunnel("tunnel", false, headers);
 const guac = new Guacamole.Client(tunnel);
 
 guac.onerror = function (error) {
-    disconnect();
+    guac.disconnect();
     alert(JSON.stringify(error));
 };
 
