@@ -3,7 +3,7 @@ FROM maven:3.8.6-jdk-8-slim AS build
 COPY src /usr/src/app/src
 COPY pom.xml /usr/src/app
 
-RUN mvn -f /usr/src/app/pom.xml clean package
+RUN --mount=type=cache,target=/root/.m2 mvn -f /usr/src/app/pom.xml clean package
 
 FROM openjdk:8-jre
 
