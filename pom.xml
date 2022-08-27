@@ -54,21 +54,21 @@
                 </configuration>
             </plugin>
 
-            <!-- Overlay guacamole-common-js (zip) -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>2.6</version>
-                <configuration>
-                    <overlays>
-                        <overlay>
-                            <groupId>org.apache.guacamole</groupId>
-                            <artifactId>guacamole-common-js</artifactId>
-                            <type>zip</type>
-                        </overlay>
-                    </overlays>
-                </configuration>
-            </plugin>
+<!--            &lt;!&ndash; Overlay guacamole-common-js (zip) &ndash;&gt;-->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-war-plugin</artifactId>-->
+<!--                <version>2.6</version>-->
+<!--                <configuration>-->
+<!--                    <overlays>-->
+<!--                        <overlay>-->
+<!--                            <groupId>org.apache.guacamole</groupId>-->
+<!--                            <artifactId>guacamole-common-js</artifactId>-->
+<!--                            <type>zip</type>-->
+<!--                        </overlay>-->
+<!--                    </overlays>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
 
             <!-- To create a runnable .jar -->
             <plugin>
@@ -106,14 +106,14 @@
             <scope>compile</scope>
         </dependency>
 
-        <!-- Guacamole JavaScript library -->
-        <dependency>
-            <groupId>org.apache.guacamole</groupId>
-            <artifactId>guacamole-common-js</artifactId>
-            <version>${version.guacamole}</version>
-            <type>zip</type>
-            <scope>runtime</scope>
-        </dependency>
+<!--        &lt;!&ndash; Guacamole JavaScript library &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.guacamole</groupId>-->
+<!--            <artifactId>guacamole-common-js</artifactId>-->
+<!--            <version>${version.guacamole}</version>-->
+<!--            <type>zip</type>-->
+<!--            <scope>runtime</scope>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>org.slf4j</groupId>
