@@ -1,7 +1,8 @@
+const spinner = document.getElementById("spinner");
 const display = document.getElementById("display");
 
 const connectionProtocol = "vnc";
-const connectionHostname = "192.168.1.88";
+const connectionHostname = "192.168.5.170";
 const connectionPort = "5900";
 const connectionUser = "";
 const connectionPassword = "password";
@@ -23,6 +24,18 @@ const headers = {
 // https://github.com/padarom/guacamole-common-js/blob/main/guacamole-common-js/src/main/webapp/modules/Tunnel.js#L251
 const tunnel = new Guacamole.HTTPTunnel("tunnel", false, headers);
 const guac = new Guacamole.Client(tunnel);
+
+const STATE_CONNECTED = 3;
+
+guac.onstatechange = function (state) {
+    switch (state) {
+        case STATE_CONNECTED: {
+            spinner.style.display = "none";
+            display.style.display = "block";
+            break;
+        }
+    }
+}
 
 guac.onerror = function (error) {
     guac.disconnect();
