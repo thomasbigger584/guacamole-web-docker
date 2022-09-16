@@ -19,7 +19,7 @@ services:
     container_name: guacd
     image: guacamole/guacd
     volumes:
-      - ./guacamole/guacd.conf:/etc/guacamole/guacd.conf
+      - ./guacamole/guacd.conf:/etc/guacamole/guacd.conf:ro
     ports:
       - "4822:4822"
     restart: on-failure
